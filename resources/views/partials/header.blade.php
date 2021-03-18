@@ -9,6 +9,16 @@
                 @if (isset($description) && $description)
                     <p class="text-white mt-0 mb-5">{{ $description }}</p>
                 @endif
+                
+                @if (session('status'))
+                    <div class="alert alert-success alert-dismissible fade show" role="alert">
+                        {{ session('status') }}
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                @endif
+
             </div>
         </div>
     </div>

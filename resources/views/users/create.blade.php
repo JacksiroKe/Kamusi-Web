@@ -30,25 +30,13 @@
                             <div class="pl-lg-4">
                                 <div class="row">
                                     <div class="col-xl-6 order-xl-2 mb-5 mb-xl-0">
-                                        <div class="form-group{{ $errors->has('first_name') ? ' has-danger' : '' }}">
-                                            <label class="form-control-label" for="input-first_name">{{ __('First Name') }}</label>
-                                            <input type="text" name="first_name" id="input-first_name" class="form-control form-control-alternative{{ $errors->has('first_name') ? ' is-invalid' : '' }}" value="">
+                                        <div class="form-group{{ $errors->has('name') ? ' has-danger' : '' }}">
+                                            <label class="form-control-label" for="input-name">{{ __('Full Name') }}</label>
+                                            <input type="text" name="name" id="input-name" class="form-control form-control-alternative{{ $errors->has('name') ? ' is-invalid' : '' }}" value="">
 
-                                            @if ($errors->has('first_name'))
+                                            @if ($errors->has('name'))
                                                 <span class="invalid-feedback" role="alert">
-                                                    <strong>{{ $errors->first('first_name') }}</strong>
-                                                </span>
-                                            @endif
-                                        </div>
-                                    </div>
-                                    <div class="col-xl-6 order-xl-2 mb-5 mb-xl-0">
-                                        <div class="form-group{{ $errors->has('last_name') ? ' has-danger' : '' }}">
-                                            <label class="form-control-label" for="input-last_name">{{ __('Last Name') }}</label>
-                                            <input type="text" name="last_name" id="input-last_name" class="form-control form-control-alternative{{ $errors->has('last_name') ? ' is-invalid' : '' }}" value="">
-
-                                            @if ($errors->has('last_name'))
-                                                <span class="invalid-feedback" role="alert">
-                                                    <strong>{{ $errors->first('last_name') }}</strong>
+                                                    <strong>{{ $errors->first('name') }}</strong>
                                                 </span>
                                             @endif
                                         </div>

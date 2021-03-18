@@ -41,8 +41,7 @@ class UserController extends Controller
     public function store(Request $rq)
     {
         User::create([
-            'first_name' => $rq->get('first_name'),
-            'last_name' => $rq->get('last_name'),
+            'name' => $rq->get('name'),
             'dobirth' => $rq->get('dobirth'),
             'gender' => $rq->get('gender'),
             'about' => $rq->get('about'),

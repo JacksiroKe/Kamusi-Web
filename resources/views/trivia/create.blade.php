@@ -1,9 +1,9 @@
-@extends('layouts.app', ['title' => __('User Profile')])
+@extends('layouts.app', ['title' => __('Trivia Profile')])
 
 @section('content')
     @include('partials.header', [
-        'title' => __('Create a New User'),
-        //'description' => __('User profile details'),
+        'title' => __('Create a New Trivia'),
+        //'description' => __('Trivia profile details'),
         //'class' => 'col-lg-7'
     ])   
 
@@ -15,7 +15,7 @@
             <div class="col-xl-8 order-xl-1">
                 <div class="card bg-secondary shadow">
                     <div class="card-body">
-                        <form method="post" action="{{ route('users.store') }}" enctype="multipart/form-data" >
+                        <form method="post" action="{{ route('trivias.store') }}" enctype="multipart/form-data" >
                             @csrf
 
                             @if (session('status'))
@@ -145,7 +145,7 @@
                                 </div>
 
                                 <div class="text-center">
-                                    <button type="submit" class="btn btn-success mt-4">{{ __('Register User') }}</button>
+                                    <button type="submit" class="btn btn-success mt-4">{{ __('Register Trivia') }}</button>
                                 </div>
                             </div>
                         </form>

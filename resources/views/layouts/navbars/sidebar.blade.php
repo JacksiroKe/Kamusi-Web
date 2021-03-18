@@ -130,6 +130,11 @@
                                 </a>
                             </li>
                             <li class="nav-item">
+                                <a class="nav-link" href="{{ route('questions.index') }}">
+                                    {{ __('Questions') }}
+                                </a>
+                            </li>
+                            <li class="nav-item">
                                 <a class="nav-link" href="{{ route('trivia.index') }}">
                                     {{ __('Trivia') }}
                                 </a>

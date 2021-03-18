@@ -1,8 +1,8 @@
-@extends('layouts.app', ['title' => __('User Profile')])
+@extends('layouts.app', ['title' => __('Trivia Profile')])
 
 @section('content')
     @include('partials.header', [
-        'title' => __('Site Users'),
+        'title' => __('Site Trivias'),
     ])   
 
 <div class="container-fluid mt--7">
@@ -12,10 +12,10 @@
                 <div class="card-header border-0">
                     <div class="row align-items-center">
                         <div class="col-8">
-                            <h3 class="mb-0">Site Users</h3>
+                            <h3 class="mb-0">Site Trivias</h3>
                         </div>
                         <div class="col-4 text-right">
-                            <a href="{{ route('users.create') }}" class="btn btn-sm btn-primary">Add a User</a>
+                            <a href="{{ route('trivia.create') }}" class="btn btn-sm btn-primary">Add a Trivia</a>
                         </div>
                     </div>
                 </div>
@@ -44,24 +44,24 @@
                             </tr>
                         </thead>
                         <tbody>
-                             @foreach ($users as $user)
+                             @foreach ($trivia as $trivial)
                             <tr>
-                                <td>{{ $user->name }}, {{ $user->title }}</td>
-                                <td>{{ $user->town }}, {{ $user->country }}</td>
+                                <td>{{ $trivial->name }}, {{ $trivial->title }}</td>
+                                <td>{{ $trivial->town }}, {{ $trivial->country }}</td>
                                 <td>
-                                    <a href="mailto:#">{{ $user->email }}</a>
+                                    <a href="mailto:#">{{ $trivial->email }}</a>
                                 </td>
                                 <td>
-                                    <a href="mobile:#">{{ $user->mobile }}</a>
+                                    <a href="mobile:#">{{ $trivial->mobile }}</a>
                                 </td>
-                                <td>{{ $user->created_at }}</td>
+                                <td>{{ $trivial->created_at }}</td>
                                 <td class="text-right">
                                     <div class="dropdown">
                                         <a class="btn btn-sm btn-icon-only text-light" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                             <i class="fas fa-ellipsis-v"></i>
                                         </a>
                                         <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
-                                            <a class="dropdown-item" href="{{ route('users.edit', $user->id) }}">Edit</a>
+                                            <a class="dropdown-item" href="{{ route('trivia.edit', $trivial->id) }}">Edit</a>
                                             <a class="dropdown-item" href="">Delete</a>
                                         </div>
                                     </div>

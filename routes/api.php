@@ -18,8 +18,9 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-//Route::post('/questions', 'ApiController@questions_fetch');
-Route::get('/words', 'App\Http\Controllers\ApiController@getWords');
+Route::post('/register', 'App\Http\Controllers\Api\AuthController@register');
+Route::post('/login', 'App\Http\Controllers\Api\AuthController@login');
 
-Route::get('/categories', 'App\Http\Controllers\ApiController@getCategories');
-Route::get('/trivia', 'App\Http\Controllers\ApiController@getTrivia');
+//Route::apiResource('/categories', 'App\Http\Controllers\Api\Trivia\CategoryController')->middleware('auth:api');
+Route::get('/categories', 'App\Http\Controllers\Api\Trivia\CategoryController@index');
+Route::get('/questions', 'App\Http\Controllers\Api\Trivia\QuestionController@index');

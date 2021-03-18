@@ -11,8 +11,11 @@
             <div class="card shadow">
                 <div class="card-header border-0">
                     <div class="row align-items-center">
-                        <div class="col-8">
+                        <div class="col-4">
                             <h2 class="mb-0">Makundi ya Maswali</h2>
+                        </div>
+                        <div class="col-4">
+                            {!! $categories->links() !!}
                         </div>
                         <div class="col-4 text-right">
                             <a href="{{ route('categories.create') }}" class="btn btn-sm btn-primary">Add a Category</a>
@@ -60,7 +63,7 @@
                                         </a>
                                         <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
                                             <a class="dropdown-item" href="{{ route('categories.edit', $category->id) }}">Edit</a>
-                                            <a class="dropdown-item" href="">Delete</a>
+                                            <a class="dropdown-item" href="{{ route('categories.delete', $category->id) }}" onclick="return confirm('Are you sure you want to delete: {{ $category->title }} from the system? \nBe careful, this action can not be reversed.')">Delete</a>
                                         </div>
                                     </div>
                                 </td>
@@ -73,6 +76,7 @@
                 
                 <div class="card-footer py-4">
                     <nav class="d-flex justify-content-end" aria-label="...">
+                        {!! $categories->links() !!}
                         
                     </nav>
                 </div>
