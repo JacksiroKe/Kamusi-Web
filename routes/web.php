@@ -19,10 +19,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('privacy-policy', 'App\Http\Controllers\PrivacyController@index');
+
 Auth::routes();
 
-Route::group(['middleware' => 'auth'], function () {
-    Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');    
+Route::group(['middleware' => 'auth'], function () {  
     Route::get('/home', 'App\Http\Controllers\HomeController@index')->name('home');
 
 	Route::group(['prefix' => 'users', 'as' => 'users.'], function () {

@@ -26,9 +26,9 @@
             <!-- Navbar items -->
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link nav-link-icon" href="#">
+                    <a class="nav-link nav-link-icon" href="privacy-policy">
                         <i class="ni ni-planet"></i>
-                        <span class="nav-link-inner--text">{{ __('Kiswahili Kitukuzwe') }}</span>
+                        <span class="nav-link-inner--text">{{ __('Privacy Policy') }}</span>
                     </a>
                 </li>
             </ul>
