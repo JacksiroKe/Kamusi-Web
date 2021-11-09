@@ -9,10 +9,10 @@
                 <div class="card bg-secondary shadow border-0">
                     <div class="card-body px-lg-5 py-lg-5">
                         <div class="text-center text-muted mb-4">
-                            <h1>Kamusi ya Kiswahili Privacy Statement</h1>
-                            <p class="text-darker">
-                            Thank you for entrusting Kamusi ya Kiswahili with your personal information. We consider this a serious responsibility, and we want you to know how we are handling it.
-                            </p>
+                            <h1>Privacy Statement</h1>
+                            <hr>
+                            <h3>Mobile App: Kamusi ya Kiswahili</h3>
+                            <h3>Developer: Jackson Siro</h3>
                         </div>                        
                     
                         <div class="text-darker mb-4">
