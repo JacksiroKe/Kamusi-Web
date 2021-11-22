@@ -8,6 +8,11 @@
                     <div class="col-lg-5 col-md-6">
                         <h1 class="text-white">{{ __('Kamusi ya Kiswahili') }}</h1>
                         <img src="{{ asset('argon') }}/img/banner.png" width="100%"/>
+                        <div style="border-radius: 10px; border: 2px solid #FFF; margin: 20px;padding-top: 10px;">
+                            <a href="https://github.com/jacksiro254/Kamusi-Mobile/releases/download/v0.0.2/Kamusi_0.0.2.apk">
+                                <h3 style="color: #FFF; font-size: 25px;">GET THE ANDROID APP</h3>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
